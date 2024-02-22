@@ -482,7 +482,20 @@ TxFormats::TxFormats()
         },
         commonFields);
 
+
     add(jss::DIDDelete, ttDID_DELETE, {}, commonFields);
+
+
+    add(jss::ZKSet,
+        ttZK_SET,
+        {
+            {sfZKDocument, soeOPTIONAL},
+            {sfURI, soeOPTIONAL},
+            {sfData, soeOPTIONAL},
+        },
+        commonFields);
+
+
 }
 
 TxFormats const&

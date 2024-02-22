@@ -555,6 +555,7 @@ target_sources (rippled PRIVATE
   src/ripple/app/tx/impl/DeleteAccount.cpp
   src/ripple/app/tx/impl/DepositPreauth.cpp
   src/ripple/app/tx/impl/DID.cpp
+  src/ripple/app/tx/impl/ZK.cpp
   src/ripple/app/tx/impl/Escrow.cpp
   src/ripple/app/tx/impl/InvariantCheck.cpp
   src/ripple/app/tx/impl/NFTokenAcceptOffer.cpp
@@ -851,6 +852,7 @@ if (tests)
     src/test/app/Regression_test.cpp
     src/test/app/SHAMapStore_test.cpp
     src/test/app/XChain_test.cpp
+    src/test/app/ZK_test.cpp
     src/test/app/SetAuth_test.cpp
     src/test/app/SetRegularKey_test.cpp
     src/test/app/SetTrust_test.cpp
@@ -975,6 +977,7 @@ if (tests)
     src/test/jtx/impl/delivermin.cpp
     src/test/jtx/impl/deposit.cpp
     src/test/jtx/impl/did.cpp
+    src/test/jtx/impl/zk.cpp
     src/test/jtx/impl/envconfig.cpp
     src/test/jtx/impl/fee.cpp
     src/test/jtx/impl/flags.cpp
@@ -1167,3 +1170,7 @@ if (tests)
     src/test/rpc/ShardArchiveHandler_test.cpp
     PROPERTIES SKIP_UNITY_BUILD_INCLUSION TRUE)
 endif () #tests
+
+
+set(PROOF_VERIFY_LIB "/home/pavel/Projects/zk_verify/rust/target/release/libzk_verify.so")
+target_link_libraries(rippled "${PROOF_VERIFY_LIB}")

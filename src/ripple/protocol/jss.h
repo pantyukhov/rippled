@@ -72,6 +72,9 @@ JSS(ClearFlag);            // field.
 JSS(DID);                  // ledger type.
 JSS(DIDDelete);            // transaction type.
 JSS(DIDSet);               // transaction type.
+JSS(ZK);                  // ledger type.
+JSS(ZKDelete);            // transaction type.
+JSS(ZKSet);               // transaction type.
 JSS(DeliverMax);           // out: alias to Amount
 JSS(DeliverMin);           // in: TransactionSign
 JSS(DepositPreauth);       // transaction and ledger type.
@@ -285,6 +288,7 @@ JSS(destination_tag);         // in: PathRequest
                               // out: AccountChannels
 JSS(details);                 // out: Manifest, server_info
 JSS(did);                     // in: LedgerEntry
+JSS(zk);                     // in: LedgerEntry
 JSS(dir_entry);               // out: DirectoryEntryIterator
 JSS(dir_index);               // out: DirectoryEntryIterator
 JSS(dir_root);                // out: DirectoryEntryIterator

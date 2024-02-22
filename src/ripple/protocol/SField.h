@@ -554,6 +554,7 @@ extern SF_VL const sfMemoData;
 extern SF_VL const sfMemoFormat;
 extern SF_VL const sfDIDDocument;
 extern SF_VL const sfData;
+extern SF_VL const sfZKDocument;
 
 // variable length (uncommon)
 extern SF_VL const sfFulfillment;

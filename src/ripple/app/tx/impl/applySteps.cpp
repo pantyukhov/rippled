@@ -51,6 +51,7 @@
 #include <ripple/app/tx/impl/XChainBridge.h>
 #include <ripple/protocol/TxFormats.h>
 
+#include "ZK.h"
 #include <stdexcept>
 
 namespace ripple {
@@ -159,6 +160,8 @@ with_txn_type(TxType txnType, F&& f)
             return f.template operator()<DIDSet>();
         case ttDID_DELETE:
             return f.template operator()<DIDDelete>();
+        case ttZK_SET:
+            return f.template operator()<ZKSet>();
         default:
             throw UnknownTxnType(txnType);
     }

@@ -192,6 +192,12 @@ enum LedgerEntryType : std::uint16_t
     */
     ltDID = 0x0049,
 
+    /** The ledger object which tracks the ZK.
+
+       \sa keylet::did
+    */
+    ltZK= 0x0039,
+
     //---------------------------------------------------------------------------
     /** A special type, matching any ledger entry type.
 
